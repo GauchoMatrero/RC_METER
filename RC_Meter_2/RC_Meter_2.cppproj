@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{1911feb3-649c-44c7-b48b-e2a74c66951d}</ProjectGuid>
+    <avrdevice>ATmega328</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>RC_Meter_2</AssemblyName>
+    <Name>RC_Meter_2</Name>
+    <RootNamespace>RC_Meter_2</RootNamespace>
+    <ToolchainFlavour>Winavr</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.24.2" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>"F_CPU=16000000"</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino</Value>
+      <Value>Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\variants\standard</Value>
+      <Value>Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\libraries</Value>
+      <Value>Z:\virtualshare\arduino-1.5.2\libraries</Value>
+      <Value>../../../../../Arduino/libraries</Value>
+      <Value>../Includes</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>"F_CPU=16000000"</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino</Value>
+      <Value>Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\variants\standard</Value>
+      <Value>Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\libraries</Value>
+      <Value>Z:\virtualshare\arduino-1.5.2\libraries</Value>
+      <Value>../../../../../Arduino/libraries</Value>
+      <Value>../Includes</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Includes\Defines.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Includes\Globals.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Includes\R_control.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RC_Meter_2.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\Control.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\Interpolate.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\Read_Time.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\R_control.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\Show_RC.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Arduino.h">
+      <SubType>compile</SubType>
+      <Link>Core\Arduino.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\binary.h">
+      <SubType>compile</SubType>
+      <Link>Core\binary.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\CDC.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\CDC.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Client.h">
+      <SubType>compile</SubType>
+      <Link>Core\Client.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\HardwareSerial.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+      <Link>Core\HardwareSerial.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\HID.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\HID.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\hooks.c">
+      <SubType>compile</SubType>
+      <Link>Core\hooks.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\IPAddress.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\IPAddress.h">
+      <SubType>compile</SubType>
+      <Link>Core\IPAddress.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\main.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\main.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\malloc.c">
+      <SubType>compile</SubType>
+      <Link>Core\malloc.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\new.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\new.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\new.h">
+      <SubType>compile</SubType>
+      <Link>Core\new.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Platform.h">
+      <SubType>compile</SubType>
+      <Link>Core\Platform.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\Print.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Print.h">
+      <SubType>compile</SubType>
+      <Link>Core\Print.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Printable.h">
+      <SubType>compile</SubType>
+      <Link>Core\Printable.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Server.h">
+      <SubType>compile</SubType>
+      <Link>Core\Server.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Stream.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Stream.h">
+      <SubType>compile</SubType>
+      <Link>Core\Stream.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\Udp.h">
+      <SubType>compile</SubType>
+      <Link>Core\Udp.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\USBAPI.h">
+      <SubType>compile</SubType>
+      <Link>Core\USBAPI.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\USBCore.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\USBCore.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\USBCore.h">
+      <SubType>compile</SubType>
+      <Link>Core\USBCore.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\USBDesc.h">
+      <SubType>compile</SubType>
+      <Link>Core\USBDesc.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\WCharacter.h">
+      <SubType>compile</SubType>
+      <Link>Core\WCharacter.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>Core\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\wiring.c">
+      <SubType>compile</SubType>
+      <Link>Core\wiring.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>Core\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>Core\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\wiring_private.h">
+      <SubType>compile</SubType>
+      <Link>Core\wiring_private.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\wiring_pulse.c">
+      <SubType>compile</SubType>
+      <Link>Core\wiring_pulse.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>Core\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>Core\WString.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\cores\arduino\WString.h">
+      <SubType>compile</SubType>
+      <Link>Core\WString.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\hardware\arduino\avr\variants\standard\pins_arduino.h">
+      <SubType>compile</SubType>
+      <Link>Board\pins_arduino.h</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\libraries\LiquidCrystal\LiquidCrystal.cpp">
+      <SubType>compile</SubType>
+      <Link>Libs\LiquidCrystal.cpp</Link>
+    </Compile>
+    <Compile Include="Z:\virtualshare\arduino-1.5.2\libraries\LiquidCrystal\LiquidCrystal.h">
+      <SubType>compile</SubType>
+      <Link>Libs\LiquidCrystal.h</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Includes" />
+    <Folder Include="Core" />
+    <Folder Include="Board" />
+    <Folder Include="Libs" />
+    <Folder Include="Source" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

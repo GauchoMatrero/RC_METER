@@ -1,6 +1,10 @@
 /*
 RC METER VERSION 1.1a
-Carlos Fedman 04.11.20012
+ADAPTED FOR ATMEL STUDIO
+Carlos Fedman 04.11.2012
+              28.07.2015
+Compilar con WinAVR 2010, si no da error de compilacion
+por problemas en el manejo de flotantes en las opciones -o			  
 */
 #include <Arduino.h>
 #include <LiquidCrystal/LiquidCrystal.h>
